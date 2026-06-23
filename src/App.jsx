@@ -7,6 +7,7 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import Nav from './Components/Nav';
+import bgImage from '/img/img.png';
 function App() {
 const refs = {
     home: useRef(null),
@@ -24,7 +25,7 @@ const refs = {
   return (
 <>
 <Nav scrollToSection={scrollToSection} refs={refs} />
-      <div className='bg-img'>
+      <div className='bg-img' style={{ backgroundImage: `url(${bgImage})` }}>
         
       <div ref={refs.home}> <Home scrollToSection={scrollToSection} refs={refs}/> </div>
       <div ref={refs.projects}> <Projects /> </div>
