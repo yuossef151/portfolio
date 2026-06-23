@@ -1,4 +1,3 @@
-import { div } from "framer-motion/client";
 import { ArrowDown } from "lucide-react";
 import { motion } from 'framer-motion';
 export default function Home({ scrollToSection , refs }) {

@@ -96,7 +96,7 @@ export default function Projects() {
             ))}
           </div>
 
-          <div className="flex gap-8">
+          <div className="flex gap-3">
             <a href={el.links.demo} target="_blank" className="text-sm flex  gap-2 text-white hover:text-blue-400 transition-colors font-medium">
               <ExternalLink size={20} /> Live Demo →
             </a>
