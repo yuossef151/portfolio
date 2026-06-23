@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .bg-img {
-  background-image: url('/img/img.png');
+  background-image: url('img/img.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* سر التناسق: الصورة لا تتحرك مع المحتوى */
