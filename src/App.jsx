@@ -22,7 +22,35 @@ const refs = {
       behavior: 'smooth',
     });
   };
+
+
+    useEffect(() => {
+  const img = new Image();
+  img.src = bgImage;
+
+  img.onload = () => {
+    setLoading(false);
+  };
+}, []);
+
+    if (loading) {
   return (
+    <div
+      style={{
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        background: "#000",
+        color: "#fff",
+        fontSize: "22px",
+      }}
+    >
+      Loading...
+    </div>
+  );
+}
+ else  return (
 <>
 <Nav scrollToSection={scrollToSection} refs={refs} />
       <div className='bg-img' style={{ backgroundImage: `url(${bgImage})` }}>
