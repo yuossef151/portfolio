@@ -24,32 +24,31 @@ const refs = {
     });
   };
 
-useEffect(() => {
-  const img = new Image();
-  img.src = bgImage;
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 10000); 
 
-  img.onload = () => {
-    setLoading(false);
-  };
-}, []);
+    return () => clearTimeout(timer);
+  }, []);
+  if (loading) {
+    return (
+      <div
+        style={{
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          background: "#000",
+          color: "#fff",
+          fontSize: "22px",
+        }}
+      >
+        Loading...
+      </div>
+    );
+  }
 
-if (loading) {
-  return (
-    <div
-      style={{
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        background: "#000",
-        color: "#fff",
-        fontSize: "22px",
-      }}
-    >
-      Loading...
-    </div>
-  );
-}
     
     return (
 <>
