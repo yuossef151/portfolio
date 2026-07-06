@@ -23,7 +23,6 @@ const refs = {
     });
   };
 
-
     useEffect(() => {
   const img = new Image();
   img.src = bgImage;
