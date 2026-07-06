@@ -1,5 +1,4 @@
 
-import { useRef } from 'react';
 import './App.css';
 import Home from './Components/Home';
 import Projects from './Components/Projects';
@@ -8,7 +7,9 @@ import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import Nav from './Components/Nav';
 import bgImage from '/img/img.png';
+import { useRef, useState, useEffect } from "react";
 function App() {
+    const [loading, setLoading] = useState(true);
 const refs = {
     home: useRef(null),
     projects: useRef(null),
@@ -23,7 +24,7 @@ const refs = {
     });
   };
 
-    useEffect(() => {
+useEffect(() => {
   const img = new Image();
   img.src = bgImage;
 
@@ -32,7 +33,7 @@ const refs = {
   };
 }, []);
 
-    if (loading) {
+if (loading) {
   return (
     <div
       style={{
@@ -49,7 +50,8 @@ const refs = {
     </div>
   );
 }
- else  return (
+    
+    return (
 <>
 <Nav scrollToSection={scrollToSection} refs={refs} />
       <div className='bg-img' style={{ backgroundImage: `url(${bgImage})` }}>
