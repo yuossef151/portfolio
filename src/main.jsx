@@ -10,7 +10,6 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter basename={basename}> 
       <Routes>
         <Route path="/" element={<App />} />
-        {/* يمكنك إضافة مسارات أخرى هنا إذا أردت فصل المشاريع */}
       </Routes>
     </BrowserRouter>
   </StrictMode>

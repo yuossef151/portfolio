@@ -2,15 +2,13 @@ import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import { BsGithub } from 'react-icons/bs';
 
-
-
 export default function Projects() {
   const proj = [
     {
       img: "img/proj-4.PNG",
       title: "Bookstore website",
       disc: "A dynamic e-commerce platform for book lovers, featuring a seamless browsing experience, advanced search functionality, and a secure cart system.",
-      tags: ["React", "Tailwind", "Css" , "JavaScript"],
+      tags: ["React", "TAILWIND CSS", "CSS", "JavaScript"],
       links: {
         demo: "https://yuossef151.github.io/",
         github: "https://github.com/yuossef151/yuossef151.github.io",
@@ -20,7 +18,7 @@ export default function Projects() {
       img: "img/proj-1.PNG",
       title: "Auto parts website",
       disc: "A comprehensive solution for auto enthusiasts to find spare parts easily, with categorized navigation, product filtering, and detailed technical specifications.",
-      tags: ["React", "Tailwind",  "Css" , "JavaScript"],
+      tags: ["REACT", "TAILWIND CSS", "CSS", "JAVASCRIPT"],
       links: {
         demo: "https://yuossef151.github.io/Car-Progect/",
         github: "https://github.com/yuossef151/Car-Progect",
@@ -30,7 +28,7 @@ export default function Projects() {
       img: "img/proj-3.PNG",
       title: "A replica of the ReDragon website",
       disc: "A practice project focused on replicating a high-end gaming e-commerce interface. Key learning outcomes included mastering complex CSS grid layouts, implementing interactive product hover effects, and achieving a highly responsive design for gaming peripherals.",
-      tags: ["HTML5", "Tailwind", "Css" , "JavaScript"],
+      tags: ["HTML5", "TAILWIND CSS", "CSS", "JAVASCRIPT"],
       links: {
         demo: "https://yuossef151.github.io/shopping-cart/",
         github: "https://github.com/yuossef151/shopping-cart",
@@ -40,76 +38,90 @@ export default function Projects() {
       img: "img/proj-2.PNG",
       title: "A replica of the Logitech website",
       disc: "A frontend recreation of the Logitech website, focused on building a high-end product showcase. This project highlights my ability to create immersive user interfaces, implement fluid navigation systems, and display technical hardware products with a clean, modern, and engaging aesthetic",
-      tags: ["HTML5", "bootstrap", "Css" , "JavaScript"],
+      tags: ["HTML5", "bootstrap", "CSS", "JAVASCRIPT"],
       links: {
         demo: "https://yuossef151.github.io/logitech-shop/",
         github: "https://github.com/yuossef151/logitech-shop",
       },
     },
+    {
+      img: "img/proj-5.PNG",
+      title: "Interactive Tic-Tac-Toe Game",
+      disc: "A modern, interactive web-based implementation of the classic Tic-Tac-Toe game. Built with React and styled with Tailwind CSS, featuring smooth animations, custom turn indicators, and intelligent draw-detection logic.",
+      tags: ["REACT", "TAILWIND CSS", "CSS", "JAVASCRIPT"],
+      links: {
+        demo: "https://yuossef151.github.io/X-O-Game/",
+        github: "https://github.com/yuossef151/birthday",
+      },
+    },
   ];
+
   return (
     <>
-
-<motion.div 
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.8 }}
-  className="bg-[#0a0a0a61] py-20 px-6"
->
-  {/* العنوان والوصف */}
-  <div className="text-center mb-20">
-    <p className="text-[20px] font-medium mb-4 text-white">
-      Featured Projects
-    </p>
-    <p className="text-[#a1a1a1]">
-      A selection of my recent work showcasing web development skills
-    </p>
-  </div>
-
-  {/* الكروت */}
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-    {proj.map((el, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 30 }}
+      <motion.div 
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: index * 0.2 }}
-        className="bg-[#111111] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all group"
+        transition={{ duration: 0.8 }}
+        className="py-20 px-6 max-w-6xl mx-auto"
       >
-<div className="overflow-hidden w-full h-56">
-  <img 
-    src={el.img} 
-    alt={el.title} 
-    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
-  />
-</div>        <div className="p-6">
-          <h3 className="text-xl font-bold text-white mb-3">{el.title}</h3>
-          <p className="text-gray-400 text-sm mb-4 leading-relaxed">{el.disc}</p>
-          
-          <div className="flex flex-wrap gap-2 mb-6">
-            {el.tags.map((tag, i) => (
-              <span key={i} className="text-[10px] uppercase tracking-wider bg-white/5 text-white px-2 py-1 rounded">
-                {tag}
-              </span>
-            ))}
-          </div>
+        <div className="text-center mb-16">
+          <p className="text-2xl font-bold mb-2 text-white tracking-wide">
+            Featured Projects
+          </p>
+          <p className="text-cyan-400 font-medium">
+            A selection of my recent work showcasing web development skills
+          </p>
+        </div>
 
-          <div className="flex gap-3">
-            <a href={el.links.demo} target="_blank" className="text-sm flex  gap-2 text-white hover:text-blue-400 transition-colors font-medium">
-              <ExternalLink size={20} /> Live Demo →
-            </a>
-            <a href={el.links.github} target="_blank" className="text-sm flex gap-2 text-gray-500 hover:text-white transition-colors">
-             <BsGithub size={20} />  Code
-            </a>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {proj.map((el, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              className="bg-[#0a0a0a]/95 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-400/50 transition-all shadow-xl group flex flex-col justify-between"
+            >
+              <div className="overflow-hidden w-full h-56 border-b border-white/10">
+                <img 
+                  src={el.img} 
+                  alt={el.title} 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                />
+              </div>
+
+              <div className="p-6 flex flex-col grow justify-between">
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{el.title}</h3>
+                  <p className="text-gray-300 text-sm mb-6 leading-relaxed">{el.disc}</p>
+                </div>
+
+                <div>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {el.tags.map((tag, i) => (
+                      <span key={i} className="text-[10px] uppercase tracking-wider bg-white/5 border border-white/10 text-cyan-300 px-2.5 py-1 rounded-md font-medium">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex gap-4 pt-4 border-t border-white/10">
+                    <a href={el.links.demo} target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-2 text-white hover:text-cyan-400 transition-colors font-semibold">
+                      <ExternalLink size={18} /> Live Demo →
+                    </a>
+                    <a href={el.links.github} target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-2 text-gray-400 hover:text-white transition-colors font-medium">
+                      <BsGithub size={18} /> Code
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </motion.div>
+          ))}
         </div>
       </motion.div>
-    ))}
-  </div>
-</motion.div>
-
     </>
   );
 }
