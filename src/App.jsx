@@ -1,5 +1,4 @@
 
-import { useRef } from 'react';
 import './App.css';
 import Home from './Components/Home';
 import Projects from './Components/Projects';
@@ -8,8 +7,9 @@ import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import Nav from './Components/Nav';
 import bgImage from '../public/img/pexels.jpg';
-
+import { useRef, useState, useEffect } from "react";
 function App() {
+    const [loading, setLoading] = useState(true);
 const refs = {
     home: useRef(null),
     projects: useRef(null),
@@ -23,7 +23,34 @@ const refs = {
       behavior: 'smooth',
     });
   };
-  return (
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 10000); 
+
+    return () => clearTimeout(timer);
+  }, []);
+  if (loading) {
+    return (
+      <div
+        style={{
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          background: "#000",
+          color: "#fff",
+          fontSize: "22px",
+        }}
+      >
+        Loading...
+      </div>
+    );
+  }
+
+    
+    return (
 <>
 <Nav scrollToSection={scrollToSection} refs={refs} />
       <div className='bg-img  min-h-screen bg-cover bg-center bg-fixed' style={{ backgroundImage: `url(${bgImage})` }}>        
