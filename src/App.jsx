@@ -9,7 +9,6 @@ import Nav from './Components/Nav';
 import bgImage from '../public/img/pexels.jpg';
 import { useRef, useState, useEffect } from "react";
 function App() {
-    const [loading, setLoading] = useState(true);
 const refs = {
     home: useRef(null),
     projects: useRef(null),
@@ -23,31 +22,6 @@ const refs = {
       behavior: 'smooth',
     });
   };
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 10000); 
-
-    return () => clearTimeout(timer);
-  }, []);
-  if (loading) {
-    return (
-      <div
-        style={{
-          height: "100vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          background: "#000",
-          color: "#fff",
-          fontSize: "22px",
-        }}
-      >
-        Loading...
-      </div>
-    );
-  }
 
     
     return (

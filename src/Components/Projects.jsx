@@ -54,6 +54,16 @@ export default function Projects() {
         github: "https://github.com/yuossef151/birthday",
       },
     },
+    {
+      img: "img/Chess.PNG", 
+      title: "Interactive Chess Arena",
+      disc: "A fully-featured, modern web-based chess game built with React and Tailwind CSS. Features complete move validation, check/checkmate detection, castling, en passant, pawn promotion, and live interactive match timers.",
+      tags: ["REACT", "TAILWIND CSS", "CHESS LOGIC", "JAVASCRIPT"],
+      links: {
+        demo: "https://yuossef151.github.io/Chess/",
+        github: "https://github.com/yuossef151/Chess",
+      },
+    },
   ];
 
   return (
