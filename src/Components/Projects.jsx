@@ -55,6 +55,16 @@ export default function Projects() {
       },
     },
     {
+      img: "img/proj-6.PNG",
+      title: "XENON – E-Commerce Store",
+      disc: "A full-stack online store for gaming gear, consoles, laptops and phones. Built with React and Tailwind CSS on a Supabase backend, featuring secure sign-in, wishlist and cart with live quantities, cash-on-delivery checkout, and order tracking.",
+      tags: ["REACT", "TAILWIND CSS", "SUPABASE", "JAVASCRIPT"],
+      links: {
+        demo: "https://yuossef151.github.io/E-commerce/",
+        github: "https://github.com/yuossef151/E-commerce",
+      },
+    },
+    {
       img: "img/Chess.PNG", 
       title: "Interactive Chess Arena",
       disc: "A fully-featured, modern web-based chess game built with React and Tailwind CSS. Features complete move validation, check/checkmate detection, castling, en passant, pawn promotion, and live interactive match timers.",
